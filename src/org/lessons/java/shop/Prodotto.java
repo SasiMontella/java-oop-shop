@@ -15,11 +15,11 @@ public class Prodotto {
         if (name == null || name.isEmpty()){
             throw new IllegalArgumentException("il nome inserito non è può essere vuoto");
         }
-        if(iva < 0 ){
-            throw new IllegalArgumentException("l'iva non può essere negativa");
+        if(price <= 0 ){
+            throw new IllegalArgumentException("Il prezzo inserito non è valido");
         }
-        if(price < 0 ){
-            throw new IllegalArgumentException("Il prezzo non può essere negativo");
+        if(iva <= 0 ){
+            throw new IllegalArgumentException("l'iva inserita non è valida");
         }
 
         this.code = code;
