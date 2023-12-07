@@ -21,6 +21,7 @@ public class Prodotto {
         if(price < 0 ){
             throw new IllegalArgumentException("Il prezzo non può essere negativo");
         }
+
         this.code = code;
         this.name = name;
         this.description = description;
