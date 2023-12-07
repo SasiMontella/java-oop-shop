@@ -11,7 +11,16 @@ public class Prodotto {
 
     //COSTRUTTORI
 
-    public Prodotto(int code, String name, String description, double price, int iva) {
+    public Prodotto(int code, String name, String description, double price, int iva) throws IllegalArgumentException {
+        if (name == null || name.isEmpty()){
+            throw new IllegalArgumentException("il nome inserito non è può essere vuoto");
+        }
+        if(iva < 0 ){
+            throw new IllegalArgumentException("l'iva non può essere negativa");
+        }
+        if(price < 0 ){
+            throw new IllegalArgumentException("Il prezzo non può essere negativo");
+        }
         this.code = code;
         this.name = name;
         this.description = description;
